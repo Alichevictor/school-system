@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html>
+    <head>
+<!--TITLE-->
+<title>Register</title>
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<style>
+  body{
+    font-family: "Inter";
+    font-size: 14px;
+  }
+
+
+</style>
+<!--ICON-->
+<link rel="shortcut icon" href="images/rha1.png">
+<link rel="stylesheet" href="index.css">
+<link rel="stylesheet" href="style1.css">
+<link rel="stylesheet" href="Responsive.css">
+<link href="https://fonts.googleapis.com/icon?family=Inter" rel="stylesheet">
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+<script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  </head>
+  <body>
+   <div id="starter">
+  <h3 id="needhelp">Inquiries? Contact Us</h3>
+   <p id="p1" >royalhubacademy2022@gmail.com</p><br>
+   <p id="p1" >09075164229 || 08027841285</p>
+   <i  class="material-icons" style="padding-left:255px ;position: relative;top: -45%;color: #f31a1ade ;">mail_outline</i>
+   <button id="botnz" class="bot1"><a href="sign-in.html" style="color: white;">Sign in</a></button>
+   <button id="botnz" class="bot2"><a href="index.html" style="color: white;">Home</a></button>
+   <select id="languages" name="languages"   >
+      <option>Select Language</option>
+      <option value="af">Afrikaans</option>
+      <option value="sq">Albanian - shqip</option>
+      <option value="ar">Arabic - ةيبرعلا>/option>
+      <option value="hy">Armenian - հայերեն</option>
+      <option value="ast">Asturian - asturianu</option>
+      <option value="az">Azerbaijani - azərbaycan dili</option>
+      <option value="be">Belarusian - беларуская</option>
+      <option value="bs">Bosnian - bosanski</option>
+      <option value="bg">Bulgarian - български</option>
+      <option value="ca">Catalan - català</option>
+      <option value="zh">Chinese - 中文</option>
+      <option value="co">Corsican</option>
+      <option value="hr">Croatian - hrvatski</option>
+      <option value="cs">Czech - čeština</option>
+      <option value="da">Danish - dansk</option>
+      <option value="nl">Dutch - Nederlands</option>
+      <option value="en">English</option>
+      <option value="en-GB">English (United Kingdom)</option>
+      <option value="en-US">English (United States)</option>
+      <option value="et">Estonian - eesti</option> 
+      <option value="fil">Filipino</option>
+      <option value="fi">Finnish - suomi</option>
+      <option value="fr">French - français</option>
+      <option value="ka">Georgian - ქართული</option>
+      <option value="de">German - Deutsch</option>
+      <option value="de-AT">German (Austria) - Deutsch (Österreich)</option>
+      <option value="el">Greek - Ελληνικά</option>
+      <option value="hu">Hungarian - magyar</option>
+<option value="is">Icelandic - íslenska</option>
+<option value="id">Indonesian - Indonesia</option>
+<option value="ga">Irish - Gaeilge</option>
+<option value="it-IT">Italian (Italy) - italiano (Italia)</option>
+<option value="ja">Japanese - 日本語</option>
+<option value="la">Latin</option>
+<option value="mk">Macedonian - македонски</option>
+<option value="mt">Maltese - Malti</option>
+<option value="pl">Polish - polski</option>
+<option value="pt">Portuguese - português</option>
+<option value="ru">Russian - русский</option>
+<option value="es">Spanish - español</option>
+<option value="sw">Swahili - Kiswahili</option>
+<option value="tr">Turkish - Türkçe</option>
+      </select>
+  </div>
+ 
+  <div style="position: sticky;top: 0;background-color: #fafafb;height: 80px; z-index: 5000;box-shadow: 0 0px 5px 0 rgba(0, 0, 0, 0.998),  0 0px 5px 0 rgba(0, 0, 0, 0.19)" >
+    <img src="images/rha1.png" id="ingo">
+    <span style="font-size:30px;cursor:pointer" onclick="openNav()" id="span">&#9776;</span>
+    
+    <div style="position: absolute;left: 20%;" id="dropID" >
+    <ul style="margin-top: 0;margin-bottom:20px ;" >
+
+<li onclick="dropdown(1)">
+<p id="color">ABOUT US <i class="arrow down"></i></p>
+<p id="colorz">Know who we are and our services</p>
+<li>
+
+<li onclick="dropdown(2)">
+  <p id="color"> 	Our Campuses 	<i class="arrow down"></i></p>
+  <p id="colorz">Identify our various campuses</p>
+</li>
+
+<li onclick="dropdown(3)">
+  <p id="color">Classes 	<i class="arrow down"></i> </p>
+  <p id="colorz">Discover the classes we have</p>
+</li>
+
+<li onclick="dropdown(4)">
+  <p id="color">Academic Facilities	<i class="arrow down"></i></p>
+  <p id="colorz">Know the facilities available</p>
+</li>
+
+<li onclick="dropdown(5)">
+  
+</li>
+</ul>
+</div>
+
+
+ <!--drop down page 1-->
+ <div style="height: 350px;width: 90%; display: none;"  class="stack" id="dropdown1">
+  <div id="current" style="border-right: 1px solid #780b54de;position: relative;top:-42%;" >
+    <h2 id="bluez">Our Services Include</h2>
+    <p>Creche</p>
+    <p>Pre-School</p>
+    <p>Lower Primary</p>
+    <p>After-School Care</p>
+    <p>Special Education Needs(SEN)</p>
+  </div>
+  <div  id="current" style="border-right: 1px solid #780b54de; position: relative;top:-42%;">
+    <h2 id="bluez">Skills Acquisition</h2>
+    <p>ICT/Coding/Graphics</p>
+    <p>Hair Hub, Cobbling</p>
+    <p>Baking and Culinary</p>
+    <p>Fashion Home and Music</p>
+  </div>
+  <div id="current" style="position: relative;top:-24%;">
+    <h2 id="bluez"> Our Curricula</h2>
+    <h1>Nigeria Curriculum<h1>
+      <p>British Curriculum</p>
+  </div>
+  <div id="current" style="background-color:  #780b54de;color: white; height: 330px;;"class="currentz" >
+    <h2 style="margin-top: 25px;" >Services</h2>
+    <p>Early Childcare Educational Services</p>
+    <p>Technical Skills Acquisition</p>
+    <p>Creative Skills Acquisition</p>
+    <h2>We Run Two Cardinal Curricula</h2>
+    <p >British Curriculum</p>
+    <p>Nigeria Curriculum</p>
+  </div>
+  <button onclick="close1()" style="position: absolute;top: 87%;left: 45%;height: 40px;width: 100px;color: white;background-color: #780b54de;border-radius: 15px;">Close</button>
+  <script>
+    function close1(){
+    document.getElementById("dropdown1").style.display="none";
+  }
+  </script>
+</div>
+
+
+
+ <!--drop down page2-->
+ <div style="height: 350px;width: 90%; display: none;"  class="stack" id="dropdown2">
+  <div id="current" style="border-right: 1px solid #780b54de;position: relative;top:-20%;">
+    <h2 id="bluez">The Meeting Point(TMP) Centre.</h2>
+    <h2 id="bluez"></h2>
+    <p>Behind NNPC Station,</p>
+    <p>Prince & Princess Junction,</p>
+    <p>Kaura District,</p>
+    <p>Gudu,</p>
+    <p>Abuja.</p>
+  </div>
+  <div  id="current" style="border-right: 1px solid #780b54de; position: relative;top:-10%;">
+    <h2 id="bluez">Citec Estate Centre.</h2>
+    <p>House C1,</p>
+    <p>B6 Close,</p>
+    <p>Citec Estate,</p>
+    </p>Along Jabi-Airport Road by-pass,</p>
+    <p>Nbora District,</p>
+    <p>Abuja.</p>
+  </div>
+  <div id="current" style="position: relative;top:-10%;">
+    <h2 id="bluez">Wumba Centre.</h2>
+    <p>Plot 251 Hassan Sani Street,</a></p>
+            <p>Choos Estate,</p>
+            </p>Wumba,</p>
+            <p></a></p>
+            <p>Abuja.</p>
+  </div>
+  <div id="current" style="background-color:  #780b54de;color: white; height: 330px;position: relative;top:-2%;;" class="currentz">
+    <h2 style="margin-top: 25px;" >Our Contact Information:</h2>
+    <p>Email: royalhubacademy2022@gmail.com</p>
+    <h2>09075164229</h2>
+    <h2>08027841285</h2>
+    <br><br> 
+  </div>
+  <button onclick="close2()" style="position: absolute;top: 87%;left: 45%;height: 40px;width: 100px;color: white;background-color: #780b54de;border-radius: 15px;">Close</button>
+  <script>
+    function close2(){
+    document.getElementById("dropdown2").style.display="none";
+  }
+  </script>
+</div>
+
+ 
+  </div>
+
+     <!--drop down page4-->
+     <div style="height: 350px;width: 90%; display: none;"   class="stack" id="dropdown4">
+      <div id="current" style="border-right: 1px solid #780b54de;position: relative;top:-10%">
+        <h2 id="bluez">Insurance</h2>
+        <p><a href="home insurance.html">Home Insurance</a></p>
+        <p><a href="travel insurance.html">Travel Insurance</a></p>
+        <p><a href="student insurance.html">Student Insurance</a></p>
+      </div>
+      <div  id="current" style="border-right: 1px solid #780b54de;">
+        <h2 id="bluez">Life Insurance</h2>
+        <p><a href="life insurance.html">Life Cover</a></p>
+        <p><a href="life insurance.html">Critical Illness Cover</a></p>
+        <p><a href="life insurance.html">Income Cover</a></p>
+        <p><a href="protection telephone advice.html">Telephone Protection Advice</a></p>
+      </div>
+      <div id="current" style="position: relative;top:-9%" >
+        <h2 id="bluez">Insurance Claims</h2>
+        <p><a href="home insurance.html">Home insurance claims</a></p>
+        <p><a href="travel insurance.html">Travel insurance claims</a></p>
+        <p><a href="car insurance.html">Car insurance claims</a></p>
+      </div>
+      <div id="current" style="background-color:  #780b54de;color: white; height: 330px;position: relative;top:-11%" class="currentz">
+        <h2 style="margin-top: 25px;" >Bridgewater Customers</h2>
+        <p><a href="travel insurance.html">Travel insurance claims</a></p>
+        <p><a href="car insurance.html">Car insurance claims</a></p>
+      </div>
+      <button onclick="close4()" style="position: absolute;top: 87%;left: 45%;height: 40px;width: 100px;color: white;background-color: #780b54de;border-radius: 15px;">Close</button>
+      <script>
+        function close4(){
+        document.getElementById("dropdown4").style.display="none";
+      }
+      </script>
+    </div>
+
+    <!--drop down page 5-->
+    <div style="height: 350px;width: 90%; display: none;"  class="stack" id="dropdown5">
+      <div id="current" style="border-right: 1px solid #780b54de;position: relative;top:-40%">
+        <h2 id="bluez">Life Event</h2>
+       <p><a href="berievement.html">Bereavement Support</a></p> 
+        <p><a href="seperation.html">Separation Support</a></p>
+      </div>
+      <div  id="current" style="border-right: 1px solid #780b54de;position: relative;top:-48%">
+        <h2 id="bluez">Planning Tools</h2>
+       <p><a href="review.html">Financial Health Check</a> </p>
+     
+      </div>
+      <div id="current" style="position: relative;top:-55%">
+       
+      </div>
+      <div id="current" style="background-color:  #780b54de;color: white; height: 330px;position: relative;top:-10%" class="currentz">
+        <h2 style="margin-top: 25px;" >Customer Support</h2>
+        <p><a href="services.html">Ways we can help</a></p>
+      
+        <h2 >Individual Review</h2>
+        <p><a href="review.html">Book Your Review Today For a quick <br> <br> Financial Checkup</a></p>
+      </div>
+      <button onclick="close5()" style="position: absolute;top: 87%;left: 45%;height: 40px;width: 100px;color: white;background-color: #780b54de;border-radius: 15px;">Close</button>
+      <script>
+        function close5(){
+        document.getElementById("dropdown5").style.display="none";
+      }
+      </script>
+    </div>
+  </div>
+
+<div style="height: 350px;background-image: url(images/rha10.png);background-repeat: no-repeat;background-size: cover;">
+    <div style="height: 100px;width: 270px;
+    background-color: white;position: absolute;padding: 10px;
+    left: 10%;top: 55%;   box-shadow: 0 4px 40px 0 rgba(0, 0, 0, 0.998),  0 6px 30px 0 rgba(0, 0, 0, 0.19);border-radius: 5px;">
+    <h2 id="bluez" style="font-weight:30px;">ENROLL TODAY</h2>
+    <P style="font-size: larger;font-weight:30px;">Make your registration by filling the form given below</P>
+  
+  </div>
+    </div>
+<div>
+    <ul style="height: 50px;width: 82%;background-color:#780b54de ;margin-left: 8%" id="ul" >
+      <li ><a>Online Registration</a></li>
+      <li id="p"><a>Terms & conditions</a></li>
+      <li id="p"><a>User Information</a></li>
+      <li id="p"><a>Completed</a></li>
+    </ul>
+
+
+<div id="div111" class="div11">
+ <h1>Royal Hub Academy: Celebrated for its unwavering pursuit of academic excellence, remarkable achievements, and invaluable skill development.</h1>
+<p>Unlock greater opportunities by enrolling with us.</p>  
+<button onclick="hope(2)" style="height: 40px;border-radius: 10px;border: 0px solid #780b54de;">Get Started Now</button>
+</div>
+
+<div  id="div222" class="divs1"  style="height: 400px;">
+  <h2 style="color: #780b54de;">TERMS AND CONDITIONS</h2>
+
+<div id="innercity">
+ <p> We value your interest in joining our esteemed institution of learning.</p>
+  
+ <h3>Please Note:</h3> 
+  <p>At our institution, every student is expected to demonstrate unwavering commitment to learning, continuous self-improvement, and uphold a high standard of character and conduct.</p>
+  
+ <p>We are dedicated to nurturing students who graduate not only with knowledge but also with strong character.</p> 
+
+
+</div>
+<br><br>
+
+<button onclick="hope(1)" style="height: 40px;border-radius: 10px;border: 0px solid #780b54de;width: 100px;">Decline</button>
+<button onclick="hope(3)" style="height: 40px;border-radius: 10px;border: 0px solid #780b54de;width: 100px;">Accept</button>
+</div>
+
+<div  id="div333" class="divss1" style="height: 2000px;">
+ <h2>Enrollment Information</h2> 
+<p>Please enter your information and proceed to the next step so we can build our relation with you.</p>
+<br>
+<h2 style="color: #780b54de;">Student's Basic Information</h2>
+
+
+<div id="register">
+<div><label for="Zip code"></label><br>
+<input type="text" name="Zip code" placeholder="Enter Our Study Center Nearest To You" id="input"></div>
+
+<div>
+  <label for="title">Title</label><br>
+  <select name="Title" id="input">
+    <option value="mr">Mr</option>
+    <option value="Mrs">Mrs</option>
+    <option value="Mr & Mrs">Mr&Mrs</option>
+    <option value="ms">Ms</option>
+    <option value="miss">Miss</option>
+  </select>
+  
+</div>
+
+<div>
+  <label for="gender">Gender</label><br>
+  <select name="Gender" id="input">
+    <option value="Male">Male</option>
+    <option value="female">Female</option>
+    <option value="Other">Other</option>
+  </select>
+</div>
+
+<div><label for="country">Enter Country:</label><br>
+<input type="text" name="Country" placeholder="Country" id="input"></div>
+
+<div><label for="State">Enter State:</label><br>
+<input type="text" name="State" placeholder="State" id="input"></div>
+
+<div><label>City Name:</label><br>
+<input type="text" name="City" id="input"></div>
+
+<div><label for="Currency Type"> </label><br>
+  <select id="currencySelect" class="input">
+    <option value=""></option>
+  </select>
+  </div>
+
+<div><label for="Account Type">Class Or Skill Type:</label><br>
+<select name="Account Type" id="input">
+  <option value="">Grade 1 - 5</option>
+  <option value="">Creche</option>
+  <option value="">Pre KG</option>
+  <option value="">KG</option>
+  <option value="">Technical Skills(ICT/Coding/Graphics).</option>
+  <option value="">Arts</option>
+  <option value="">Music</option>
+  <option value="">Hair Hub</option>
+  <option value="">Cobbling</option>
+  <option value="">Baking and Culinary</option>
+  <option value="">Fashion</option>
+</select></div>
+</div>
+
+<div id="underdiva">
+<h2 style="color: #780b54de;">Further Information(Including Information For Special Needs Students(SEN).</h2><br>
+
+<div><label >Class/Program Of Choice</label><br>
+<select name="Employment" id="input">
+  <option value="">Grade 1 - 5</option>
+  <option value="">Creche</option>
+  <option value="">Pre KG</option>
+  <option value="">KG</option>
+  <option value="">Playgroup</option>
+  <option value="">Reception</option>
+  <option value="">Skills Acquisition Prpgram</option>
+</select>
+
+</div>
+
+<div><label for="Annual income Range">For Special Education Needs Students, Specify for Age</label><br>
+<select name="Salary Range" id="input">
+  <option value="">4 - 10yrs</option>
+  <option value="">11 - 15yrs</option>
+  <option value="">16 - 20yrs</option>
+  <option value="">21 - 25yrs</option>
+  <option value="">26 - 30yrs</option>
+  <option value="">31 and above</option>
+ 
+</select>
+</div>
+
+
+
+<div>
+  <label for="Please select Relationship">Please select Relationship With your Sponsor</label><br>
+<select name="Relationship" id="input">
+  <option value="">Son</option>
+  <option value="">Daughter</option>
+  <option value="">Father</option>
+  <option value="">Mother</option>
+  <option value="">Spouse</option>
+  <option value="">Other Relative</option>
+</select>
+</div>
+
+<div>
+  <label for="age">Age</label><br>
+ <select name="Age" id="input">
+  <option value="">5-10yrs</option>
+  <option value="">11-20yrs</option>
+  <option value="">21-30yrs</option>
+  <option value="">31yrs and above</option>
+ </select>
+</div><br>
+
+
+<div>
+  <label for="question">Special Education Needs Students' Form:</label><br>
+ <select name="question" id="input">
+  <option value="">What is your first name?</option>
+  <option value="">What is your last name?</option>
+  <option value="">What is your parents' phone number</option>
+  <option value="">what your residencial address</option>
+  <option value="">will you like to enroll with us?</option>
+ </select>
+</div>
+<div>
+  <label for="">Answer To The Question</label><br>
+  <input type="text" name="answer" id="input">
+</div>
+
+<div id="underdiva1">
+<form action="register.php" method="post" autocomplete="off" enctype="multipart/form-data">
+  <h2 for="password" style="color: #780b54de;">More information</h2>
+  <div><label for="firstName">First Name:</label><br>
+  <input type="text" name="firstName" required id="input"><br></div><br>
+  
+  <div><label for="lastName">Last Name:</label><br>
+  <input type="text" name="lastName" required id="input"><br></div><br>
+  
+  
+  <div><label for="otherName">Other Name:</label><br>
+  <input type="text" name="otherName" required id="input"><br></div><br>
+  
+  <div><label for="email">Email:</label><br>
+  <input type="email" name="email" required id="input"><br></div><br>
+  
+ <div><label for="phoneNumber">Phone Number:</label><br>
+  <input type="tel" name="phoneNumber" required id="input"><br></div> <br>
+  
+  <div>
+    <label for="Date of birth">Date Of Birth:</label><br>
+    <input type="date" name="dateOfBirth" placeholder="please enter without slashes" id="input">
+</div><br>
+
+  
+ <div><label for="residentialAddress">Residential Address:</label><br>
+  <input type="text" name="residentialAddress" required id="input"><br></div> <br>
+
+  <div><label for="statesecurityNumber">Phone Number:</label><br>
+  <input type="text" name="statesecurityNumber" required id="input"><br></div><br>
+  
+  <div><label for="nextofkinName">Next of Kin Name:</label><br>
+  <input type="text" name="nextofkinName" required id="input"><br></div><br>
+  
+ <div><label for="username">Username:</label><br>
+  <input type="text" name="username" required id="input"><br></div> <br>
+  
+ <div><label for="password">Password:</label><br>
+  <input type="password" name="password" required id="input"><br></div> <br>
+
+<div><h2 for="password" style="color: #780b54de;">Please Upload a clear passport photograph of yourself.</h2>
+  <label for="image">Profile Image:</label><br>
+  <input type="file" name="image" accept="image/*" required ><br></div> <br>
+  
+  
+  <input type="submit" value="Register" style="height: 40px;width: 100px;background-color: #780b54de;color:white;border-radius: 7px;">
+</form>
+</div>
+<div>
+
+
+  
+
+ <p><a href="sign-in.html">Already registered? Login Here</a></p></div>
+
+</div>
+
+
+<script>
+  let div1 = document.getElementById("div111").style.display;
+let div2 = document.getElementById("div222").style.display;
+let div3 = document.getElementById("div333").style.display;
+
+
+function hope(num){
+  if(num === 1){
+    terminatehope();
+    document.getElementById("div111").style.display="block";
+  }else if(num === 2){
+    terminatehope();
+    document.getElementById("div222").style.display="block";
+  }else if(num === 3){
+    terminatehope();
+    document.getElementById("div333").style.display="block";
+  }
+}
+function terminatehope() {
+  document.getElementById("div111").style.display = "none";
+  document.getElementById("div222").style.display = "none";
+  document.getElementById("div333").style.display = "none";
+}
+
+</script>
+
+
+
+</div>
+<div style="height: 150px;box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.998),  0 6px 15px 0 rgba(0, 0, 0, 0.19);display: none;">
+  <div style="margin-left: 8%;padding-top: 20px;">
+    <h1 style="color:#780b54de">Connect with us</h1>
+<p>Listening to what you have to say about our services matters to us.</p></div>
+
+</div>
+<div id="foots">
+  <div id="footer" >
+  <div>
+  <h3>HELP AND SUPPORT </h3>
+  <p>Got a question? We are here to help <br>you</p>
+  </div>
+  
+  <div>
+  <h3>OUR PERFORMANCE</h3>
+  <p>Get information about our <br> performance</p>
+  </div>
+  
+  <div>
+  <h3>ABOUT ROYAL HUB ACADEMY</h3>
+  <p>Educational and ChildCare Services, Career, Technical Skills, Creative Skills.</p>
+  </div>
+</div>
+
+  
+  <div>
+    <p style="text-align: center;">
+      We are dedicated to delivering top-tier educational childcare services, equipping you with the essential skills you require for a brighter future.
+    </p>
+    <br>
+    <p style="text-align: center; margin-top: 0%;">
+      royalhubacademy2022@gmail.com || 09075164229 || 08027841285
+    </p>
+  </div>
+  <div>
+   
+  
+
+    <div style="text-align: center; margin-top: 10px;">
+      <a href="https://web.facebook.com/profile.php?id=100083575624375" target="_blank" style="text-decoration: none; margin-right: 10px;">
+        <img src="images/facebook-icon.png" alt="Facebook" style="height: 20px; width: 20px;">
+        
+      </a>
+      <a href="https://www.instagram.com/royalhubacademy" target="_blank" style="text-decoration: none; margin-left: 10px;">
+        <img src="images/instagram-icon.png" alt="Instagram" style="height: 20px; width: 20px;">
+      
+      </a>
+    </div>
+    
+    <!--Start of Tawk.to Script-->
+    <script type="text/javascript">
+    var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+    (function(){
+    var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+    s1.async=true;
+    s1.src='https://embed.tawk.to/653352bea84dd54dc48372c6/1hd87me6q';
+    s1.charset='UTF-8';
+    s1.setAttribute('crossorigin','*');
+    s0.parentNode.insertBefore(s1,s0);
+    })();
+    </script>
+    <!--End of Tawk.to Script-->
+    
+    <img id="imago" src="images/rha1.png" alt="logo" style="height: 80px; width: 80px; position: relative; top: -15%; left: 12%;">
+    
+    <p style="text-align: center; color: rgb(216, 211, 211);">
+      © 2023 Royal Hub Academy - All rights reserved.
+    </p>
+    
+  
+<script src="student.js"></script>
+<script src="register.js"></script>
+    <script src="index.js"></script>
+                </body>
+                </html>
